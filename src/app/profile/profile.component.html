@@ -1,3 +1,23 @@
-<!-- <h1>GitHub Search</h1>
-<app-profile-form></app-profile-form>
-<a href class="btn btn-success" id="view">Search</a> -->
+<div class= "container">
+    <div class="jumbotron">
+      <h1>GitHub Search</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <app-profile-form></app-profile-form>
+        <a href="{{user.html_url}}" class="btn btn-success" id="view">Search</a>
+      </div>
+      <div class="col-md-6">
+        <table>
+          <tr>
+            <td >Github username: </td>
+            <td class="label">{{user.login}}</td>
+          </tr>
+          <tr>
+            <td >Repositories: </td>
+            <td class="label">{{user.public_repos}}</td>
+          </tr>
+          </table>
+      </div>
+    </div>
+  </div>
