@@ -1,4 +1,14 @@
-h1{
+/* h1{
     color: brown;
    font-size: 40px;
+   position: relative;
+   left: -400px;
+   padding: 30px;
+} */
+.jumbotron{
+    color: brown;
+   font-size: 40px;
+   position: relative;
+   left: -400px;
+   /* padding: 30px; */
 }
