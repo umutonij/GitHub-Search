@@ -29,7 +29,6 @@ export class ProfileService {
       followers: number;
       following: number;
       created_at: Date;
-
   }
   const promise = new Promise((resolve, reject) => {
     this.http.get<ApiResponse>( + username + environment.apikey).toPromise().then(profile => {
