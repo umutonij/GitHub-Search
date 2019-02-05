@@ -22,6 +22,7 @@ export class ProfileService {
     this.repository = new Repository (' ', ' ', ' ', ' ', ' ');
   }
   getProfileInfo(username){
+    console.log(username);
     interface ApiResponse {
       username: string;
       login: string;
@@ -31,7 +32,7 @@ export class ProfileService {
       created_at: Date;
   }
   const promise = new Promise((resolve, reject) => {
-    this.http.get<ApiResponse>( + username + environment.apikey).toPromise().then(profile => {
+    this.http.get<ApiResponse>( 'https://api.github.com/users/'+ username + "?access_token="+environment.apikey).toPromise().then(profile => {
         this.user.login = profile.login;
         this.user.public_repository = profile.public_repository
         this.user.followers = profile.followers;
@@ -54,7 +55,7 @@ getRepositoryInfo(username) {
     html_url: string;
     clone_url: string;
 }
-this.http.get<ApiResponse>(environment.apiUrl + username + environment.apiRepositorykey).subscribe(response => {
+this.http.get<ApiResponse>('https://api.github.com/users/' + username + "/repos?access_token=" +environment.apiRepokey).subscribe(response => {
   
     this.items = response;  
   });
