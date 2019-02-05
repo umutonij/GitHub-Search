@@ -1,11 +1,9 @@
 <div class= "container">
-    <div class="jumbotron">
-      <h1>GitHub Search</h1>
-    </div>
     <div class="row">
       <div class="col-md-6">
         <app-profile-form></app-profile-form>
-        <a href="{{user.html_url}}" class="btn btn-success" id="view">Search</a>
+        <a href="{{repository.html_url}}" class="btn btn-danger" id="view">Search</a>
+        <p>{{repository.public_repository}}</p>
       </div>
       <div class="col-md-6">
         <table>
@@ -15,7 +13,19 @@
           </tr>
           <tr>
             <td >Repositories: </td>
-            <td class="label">{{user.public_repos}}</td>
+            <td class="label">{{user.public_repository}}</td>
+          </tr>
+          <tr>
+            <td >Following: </td>
+            <td class="label">{{user.following}}</td>
+          </tr>
+          <tr>
+            <td >Followers: </td>
+            <td class="label">{{user.followers}}</td>
+          </tr>
+          <tr>
+            <td >Created at: </td>
+            <td class="label">{{user.Date}}</td>
           </tr>
           </table>
       </div>

@@ -6,11 +6,11 @@ import {Repository} from '../repository';
 
 
 @Injectable({
-  providedIn: 'root' //we declare that this service should be created by the root application injector.
+  providedIn: 'root' 
 })
 
 export class ProfileService {
-  repo: Repository; 
+  repository: Repository; 
     user: User;
 
   private username: string;
@@ -18,34 +18,26 @@ export class ProfileService {
   constructor(private http:HttpClient) { 
     console.log ("service is now ready!");
     this.username = 'umutonij';
-    this.user = new User (' ',0,0,0);
-    this.repo = new Repository (' ', ' ', ' ', ' ', ' ');
+    this.user = new User (' ','',0,0,0, new Date());
+    this.repository = new Repository (' ', ' ', ' ', ' ', ' ');
   }
   getProfileInfo(username){
     interface ApiResponse {
-      // name: string;
+      username: string;
       login: string;
-      // avatar_url: string;
-      // email: string;
-      // location: string;
-      public_repos: number;
-      // html_url: string;
+      public_repository: number;
       followers: number;
       following: number;
-    // return this.http.get("https://api.github.com/users/" + this.username)
+      created_at: Date;
 
   }
   const promise = new Promise((resolve, reject) => {
-    this.http.get<ApiResponse>(environment.apiUrl + username + environment.apikey).toPromise().then(profile => {
-        //  this.user.name = profile.name;
+    this.http.get<ApiResponse>( + username + environment.apikey).toPromise().then(profile => {
         this.user.login = profile.login;
-        // this.user.avatar_url = profile.avatar_url;
-        // this.user.email = profile.email;
-        // this.user.location = profile.location;
-        this.user.public_repos = profile.public_repos;
-        // this.user.html_url = profile.html_url;
+        this.user.public_repository = profile.public_repository
         this.user.followers = profile.followers;
         this.user.following = profile.following;
+        // this.user.created_at = profile.Date;
 
         console.log(profile);
          resolve();
@@ -55,7 +47,7 @@ export class ProfileService {
 });
 return promise;
 }
-getRepoInfo(username) {
+getRepositoryInfo(username) {
   interface ApiResponse {
     name: string;
     homepage: string;
@@ -63,7 +55,7 @@ getRepoInfo(username) {
     html_url: string;
     clone_url: string;
 }
-this.http.get<ApiResponse>(environment.apiUrl + username + environment.apiRepokey).subscribe(response => {
+this.http.get<ApiResponse>(environment.apiUrl + username + environment.apiRepositorykey).subscribe(response => {
   
     this.items = response;  
   });

@@ -10,7 +10,7 @@ export class ProfileFormComponent implements OnInit {
 
   submitSearch(name) {
     this.profileService.getProfileInfo(name.target.value);
-    this.repoService.getRepoInfo(name.target.value);
+    this.repoService.getRepositoryInfo(name.target.value);
   }
    constructor(private profileService: ProfileService, private repoService: ProfileService) { }
   ngOnInit() {
