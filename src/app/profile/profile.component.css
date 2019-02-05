@@ -1,7 +1,17 @@
 .btn-danger{
     position: relative;
-    left: -300px;
+    left: -50px;
 }
 td{
     padding: 10px;
+}
+.search{
+    padding-top: 100px;
+    position: relative;
+    right: -280px;
+}
+.container{
+    background-color: antiquewhite;
+    position: relative;
+    left: -300px;
 }

@@ -1,27 +1,38 @@
-# GithubSearch
+# GitHub Search
+This is an application that is used to search anyone on the GitHub. 05th,February,2019.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
+Done by: *Jacqueline UMUTONI*
 
-## Development server
+## Description
+This application is done so that i can help people to make a research online for anyone on GitHub. this one requires to input your username on github and then press search. after that all the information about that username will be displayed.
+## Setup/Installation Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You would need the following to access the website:
 
-## Code scaffolding
+* Smart phone/PC/laptop/Desktop or Tablet.
+* A running network connection to the internet(either wireless or ethernet).
+* A web browser(Chrome is most recommendable).
+* Development server
+* Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## BEHAVIOUR DRIVEN DEVELOPMENT(BDD)
 
-## Build
+This application is done so that i can help people to make a research online for anyone on GitHub. this one requires to input your username on github and then press search. after that all the information about that username will be displayed such as the github username,the repository of that account, the followers of that user has, the people that user follows and the date when that account has been created. You can also use ng generate directive|pipe|service|class|guard|interface|enum|module.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Technologies Used
 
-## Running unit tests
+* HTML
+* CSS
+* Bootstrap
+* Angular(Typescript).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Support and contact details
 
-## Running end-to-end tests
+I Encourage you to contact me when you get a question, addition or assistance through:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* Email: *jacquelineumutoni13@gmail.com*
+* Phone: 0787683456
+* Adress: Kigali-Rwanda
+## License
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+MIT Copyright (c) 2019 UMUTONI Jacqueline

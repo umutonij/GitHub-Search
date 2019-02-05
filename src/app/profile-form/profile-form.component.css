@@ -2,9 +2,5 @@
     width: 400px;
     padding-top: 80px;
     position: relative;
-    left: -200px;
-}
-.btn-success{
-    position: relative;
-    left: -700px;
+    right: -100px;
 }
