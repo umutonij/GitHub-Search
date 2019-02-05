@@ -1,14 +1,17 @@
 <div class= "container">
     
-    <div class="row">
-      <div class="col-md-6">
+    <!-- <div class="row"> -->
+      <!-- <div class="col-md-6"> -->
         <app-profile-form></app-profile-form>
-        <!-- <a href class="btn btn-danger" id="view">Search</a> -->
+        <a href="{{user.html_url}}" class="btn btn-primary" id="view">view the Github link here</a>
         <!-- <p>{{repository.public_repository}}</p> -->
-      </div>
+      <!-- </div> -->
       <div class="search">
-      <div class="col-md-6">
+      <!-- <div class="col-md-6"> -->
         <table >
+            <tr>
+                <img src="{{user.avatar_url}}" >
+              </tr>
           <tr>
             <td >Github username: </td>
             <td class="label">{{user.login}}</td>
@@ -25,12 +28,9 @@
             <td >Followers: </td>
             <td class="label">{{user.followers}}</td>
           </tr>
-          <tr>
-            <td >Created at: </td>
-            <td class="label">{{user.Date}}</td>
-          </tr>
+          
           </table>
       </div>
-    </div>
-  </div>
+    
+  <!-- </div> -->
 </div>

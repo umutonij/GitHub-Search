@@ -10,10 +10,10 @@ export class ProfileFormComponent implements OnInit {
   name ={
     name:""
   }
-  user = new User (' ',' ',0,0,0,new Date);
+  user = new User (' ',' ',0,0,0,'','',new Date);
   submitSearch(name) {
-    this.profileService.getProfileInfo(name.target.value);
-    this.repoService.getRepositoryInfo(name.target.value);
+    this.profileService.getProfileInfo(this.name.name);
+    this.repoService.getRepositoryInfo(this.name.name);
   }
    constructor(private profileService: ProfileService, private repoService: ProfileService) { }
   ngOnInit() {

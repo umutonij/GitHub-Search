@@ -18,7 +18,7 @@ export class ProfileService {
   constructor(private http:HttpClient) { 
     console.log ("service is now ready!");
     this.username = 'umutonij';
-    this.user = new User (' ','',0,0,0, new Date());
+    this.user = new User (' ','',0,0,0, '','',new Date());
     this.repository = new Repository (' ','',0,0,0, new Date());
   }
   getProfileInfo(username){
@@ -26,19 +26,22 @@ export class ProfileService {
     interface ApiResponse {
       username: string;
       login: string;
-      public_repository: number;
+      public_repos: number;
       followers: number;
       following: number;
+      html_url: string
       created_at: Date;
+      avatar_url: string;
   }
   const promise = new Promise((resolve, reject) => {
-    this.http.get<ApiResponse>( 'https://api.github.com/users/'+ username + "?access_token=893a9628ba3c5b589f06c64875b15dcda42fac12").toPromise().then(profile => {
+    this.http.get<ApiResponse>( 'https://api.github.com/users/'+ username + "?access_token=7c9157224274c5964a1adfcd66dd76297e1bbb6a").toPromise().then(profile => {
         this.user.login = profile.login;
-        this.user.public_repository = profile.public_repository
+        this.user.public_repository = profile.public_repos
         this.user.followers = profile.followers;
         this.user.following = profile.following;
-        // this.user.created_at = profile.Date;
-
+        this.user.created_at = profile.created_at;
+        this.user.html_url = profile.html_url;
+        this.user.avatar_url = profile.avatar_url;
         // console.log(profile);
          resolve();
     },
@@ -57,7 +60,7 @@ getRepositoryInfo(username) {
       following: number;
       created_at: Date;
 }
-this.http.get<ApiResponse>('https://api.github.com/users/' + username + "/repos?access_token=893a9628ba3c5b589f06c64875b15dcda42fac12").subscribe(response => {
+this.http.get<ApiResponse>('https://api.github.com/users/' + username + "/repos?access_token=7c9157224274c5964a1adfcd66dd76297e1bbb6a").subscribe(response => {
   
     this.items = response;  
   });
