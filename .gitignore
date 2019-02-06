@@ -46,6 +46,6 @@ export const environment = {
   production: false,
 
 apiUrl: 'https://api.github.com/users/',
-apikey: '?access_token=41b6ca1330537c168b4295406c67d27e2f8b6ffd',
-apiRepokey: '/repo?access_token=41b6ca1330537c168b4295406c67d27e2f8b6ffd',
+apikey: '?access_token=d5b85a010ff0428c9239788b2bfdf35673f9c559',
+apiRepokey: '/repo?access_token=d5b85a010ff0428c9239788b2bfdf35673f9c559',
 };
