@@ -1,3 +1,4 @@
+
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateCountPipe implements PipeTransform {
 
-  transform(value: any): number {
+  transform(value: any): number  {
     let today:Date = new Date(); //get current date and time
     let todayWithNoTime:any = new Date(today.getFullYear(),today.getMonth(),today.getDate())
     var dateDifference =Math.abs(value-todayWithNoTime )// returns value in milliseconds
@@ -21,4 +22,6 @@ export class DateCountPipe implements PipeTransform {
         return 0;
     }
   }
+
 }
+
