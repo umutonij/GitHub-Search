@@ -1,7 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+
 /tmp
 /out-tsc
 
@@ -46,6 +46,6 @@ export const environment = {
   production: false,
 
 apiUrl: 'https://api.github.com/users/',
-apikey: '?access_token=45fc862a3c9efe28862107b296488b77dbc7272a ',
-apiRepokey: '/repo?access_token=45fc862a3c9efe28862107b296488b77dbc7272a ',
+apikey: '?access_token=de0a71619d2e657c3e1e6d2761bb1f1de1a92dc0 ',
+apiRepokey: '/repo?access_token=de0a71619d2e657c3e1e6d2761bb1f1de1a92dc0 ',
 };
