@@ -60434,7 +60434,7 @@ var ProfileService = /** @class */ /*@__PURE__*/ (function () {
         var _this = this;
         console.log(username);
         var promise = new Promise(function (resolve, reject) {
-            _this.http.get('https://api.github.com/users/' + username + "?access_token=de0a71619d2e657c3e1e6d2761bb1f1de1a92dc0 ").toPromise().then(function (profile) {
+            _this.http.get('https://api.github.com/users/' + username + "?access_token=c52b453183e226802d899e1750d2036ee962e40d ").toPromise().then(function (profile) {
                 _this.user.login = profile.login;
                 _this.user.public_repository = profile.public_repos;
                 _this.user.followers = profile.followers;
@@ -60451,7 +60451,7 @@ var ProfileService = /** @class */ /*@__PURE__*/ (function () {
     ProfileService.prototype.getRepositoryInfo = function (username) {
         var _this = this;
         console.log(username);
-        this.http.get('https://api.github.com/users/' + username + "/repos?access_token=de0a71619d2e657c3e1e6d2761bb1f1de1a92dc0 ").subscribe(function (response) {
+        this.http.get('https://api.github.com/users/' + username + "/repos?access_token=c52b453183e226802d899e1750d2036ee962e40d ").subscribe(function (response) {
             _this.items = response;
         });
     };
