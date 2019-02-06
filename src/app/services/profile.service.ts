@@ -19,7 +19,7 @@ export class ProfileService {
     console.log ("service is now ready!");
     this.username = 'umutonij';
     this.user = new User (' ','',0,0,0, '','',new Date());
-    this.repository = new Repository (' ','',0,0,0, new Date());
+    this.repository = new Repository ('','',0,0,0, '','',new Date);
   }
   getProfileInfo(username){
     console.log(username);
@@ -34,7 +34,7 @@ export class ProfileService {
       avatar_url: string;
   }
   const promise = new Promise((resolve, reject) => {
-    this.http.get<ApiResponse>( 'https://api.github.com/users/'+ username + "?access_token=d5b85a010ff0428c9239788b2bfdf35673f9c559").toPromise().then(profile => {
+    this.http.get<ApiResponse>( 'https://api.github.com/users/'+ username + "?access_token=71e747f3c86558134a8e2507c71f8bd92f16627a").toPromise().then(profile => {
         this.user.login = profile.login;
         this.user.public_repository = profile.public_repos
         this.user.followers = profile.followers;
@@ -60,7 +60,7 @@ getRepositoryInfo(username) {
       following: number;
       created_at: Date;
 }
-this.http.get<ApiResponse>('https://api.github.com/users/' + username + "/repos?access_token=d5b85a010ff0428c9239788b2bfdf35673f9c559").subscribe(response => {
+this.http.get<ApiResponse>('https://api.github.com/users/' + username + "/repos?access_token=71e747f3c86558134a8e2507c71f8bd92f16627a").subscribe(response => {
   
     this.items = response;  
   });
