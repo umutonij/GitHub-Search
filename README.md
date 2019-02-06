@@ -14,6 +14,7 @@ You would need the following to access the website:
 * A web browser(Chrome is most recommendable).
 * Development server
 * Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+* you can view the link directly through: https://umutonij.github.io/GitHub-Search/
 
 ## BEHAVIOUR DRIVEN DEVELOPMENT(BDD)
 
