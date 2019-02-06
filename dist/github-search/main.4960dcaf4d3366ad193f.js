@@ -60295,7 +60295,7 @@ __webpack_require__.r(__webpack_exports__);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */
-var styles = [".btn-danger[_ngcontent-%COMP%]{\n    position: relative;\n    left: -50px;\n}\ntd[_ngcontent-%COMP%]{\n    padding: 10px;\n}\n.search[_ngcontent-%COMP%]{\n    padding-top: 100px;\n    position: relative;\n    right: -280px;\n    padding: 60px;\n}\n.container[_ngcontent-%COMP%]{\n    background-color: antiquewhite;\n    position: relative;\n    left: -300px;\n    padding: 30px;\n}"];
+var styles = [".btn-danger[_ngcontent-%COMP%]{\n    position: relative;\n    left: -50px;\n}\ntd[_ngcontent-%COMP%]{\n    padding: 10px;\n}\n.search[_ngcontent-%COMP%]{\n    padding-top: 100px;\n    position: relative;\n    right: -280px;\n    padding: 60px;\n}\n.container[_ngcontent-%COMP%]{\n    background-color: antiquewhite;\n    position: relative;\n    left: -300px;\n    padding: 30px;\n}\nimg[_ngcontent-%COMP%]{\n    width: 300px;\n}"];
 
 
 
@@ -60434,7 +60434,7 @@ var ProfileService = /** @class */ /*@__PURE__*/ (function () {
         var _this = this;
         console.log(username);
         var promise = new Promise(function (resolve, reject) {
-            _this.http.get('https://api.github.com/users/' + username + "?access_token=c52b453183e226802d899e1750d2036ee962e40d ").toPromise().then(function (profile) {
+            _this.http.get('https://api.github.com/users/' + username + "?access_token=4e506891c065d69bf641bbe51727e32d407658e2 ").toPromise().then(function (profile) {
                 _this.user.login = profile.login;
                 _this.user.public_repository = profile.public_repos;
                 _this.user.followers = profile.followers;
@@ -60451,7 +60451,7 @@ var ProfileService = /** @class */ /*@__PURE__*/ (function () {
     ProfileService.prototype.getRepositoryInfo = function (username) {
         var _this = this;
         console.log(username);
-        this.http.get('https://api.github.com/users/' + username + "/repos?access_token=c52b453183e226802d899e1750d2036ee962e40d ").subscribe(function (response) {
+        this.http.get('https://api.github.com/users/' + username + "/repos?access_token=4e506891c065d69bf641bbe51727e32d407658e2").subscribe(function (response) {
             _this.items = response;
         });
     };
