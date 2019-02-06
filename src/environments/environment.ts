@@ -6,8 +6,8 @@ export const environment = {
   production: false,
 
   apiUrl: 'https://api.github.com/users/',
-apikey: '71e747f3c86558134a8e2507c71f8bd92f16627a',
-apiRepokey: '71e747f3c86558134a8e2507c71f8bd92f16627a',
+apikey: '8aa10d36377b7a1106af57e5a2c3610db360ff95',
+apiRepokey: '8aa10d36377b7a1106af57e5a2c3610db360ff95',
 };
 /*
  * For easier debugging in development mode, you can import the following file
