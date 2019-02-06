@@ -1,4 +1,4 @@
-import { StrikethrougDirective } from './strikethroug.directive';
+// import { StrikethrougDirective } from './strikethroug.directive';
 
 describe('StrikethrougDirective', () => {
   it('should create an instance', () => {
