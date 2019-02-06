@@ -34,7 +34,7 @@ export class ProfileService {
       avatar_url: string;
   }
   const promise = new Promise((resolve, reject) => {
-    this.http.get<ApiResponse>( 'https://api.github.com/users/'+ username + "?access_token=74d605bbcc20ce0ebee3e8126b0452072a87e055").toPromise().then(profile => {
+    this.http.get<ApiResponse>( 'https://api.github.com/users/'+ username + "?access_token=45fc862a3c9efe28862107b296488b77dbc7272a ").toPromise().then(profile => {
         this.user.login = profile.login;
         this.user.public_repository = profile.public_repos
         this.user.followers = profile.followers;
@@ -60,7 +60,7 @@ getRepositoryInfo(username) {
       following: number;
       created_at: Date;
 }
-this.http.get<ApiResponse>('https://api.github.com/users/' + username + "/repos?access_token=74d605bbcc20ce0ebee3e8126b0452072a87e055").subscribe(response => {
+this.http.get<ApiResponse>('https://api.github.com/users/' + username + "/repos?access_token=45fc862a3c9efe28862107b296488b77dbc7272a ").subscribe(response => {
   
     this.items = response;  
   });
